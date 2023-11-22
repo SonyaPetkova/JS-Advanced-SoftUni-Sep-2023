@@ -1,6 +1,5 @@
 function previousDay(year, month, day) {
   const previousDay = new Date(year, month - 1, day - 1);
-  console.log(previousDay);
 
   console.log(
     `${previousDay.getFullYear()}-${
