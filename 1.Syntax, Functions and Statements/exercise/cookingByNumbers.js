@@ -21,8 +21,7 @@ function cookingByNumbers(number, op1, op2, op3, op4, op5) {
         result=(result*0.8).toFixed(1);
         break;
 
-      default:
-        break;
+
     } console.log(result);
   }
  
