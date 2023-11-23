@@ -3,7 +3,9 @@ function sameNumbers(input) {
   let sum = 0;
   let numAsString = input.toString();
 
-  numAsString.split("").map(el=> {
+  numAsString
+  .split("")
+  .map(el=> {
     if(el !==numAsString[0]){
         isTrue=false;
     }
