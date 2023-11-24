@@ -1,7 +1,7 @@
 function sumFirstLast(arr) {
     let firstNumber=Number(arr.shift())
     let lastNumber=Number(arr.pop())
-    let result=firstNumber+lastNumber
-    console.log(result);
+    return firstNumber+lastNumber;
+   
 }
 sumFirstLast(['20', '30', '40'])
