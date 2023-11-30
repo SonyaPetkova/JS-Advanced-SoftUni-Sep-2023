@@ -1,19 +1,19 @@
 function sortingNumbers(input) {
   let sortedArr = input.sort((a, b) => a - b);
-  let temporaryArr = [];
+  let result = [];
   let arrLength = sortedArr.length;
   let newArr = [];
 
   for (let i = 0; i < arrLength; i++) {
     let currentEl = sortedArr.shift();
     let nextEl = sortedArr.pop();
-    temporaryArr.push(currentEl);
-    temporaryArr.push(nextEl);
+    result.push(currentEl);
+    result.push(nextEl);
   }
-  temporaryArr = temporaryArr.join(" ");
+  result = result.join(" ");
 
-  temporaryArr = temporaryArr.split(" ");
-  temporaryArr = temporaryArr.forEach((el) => {
+  result = result.split(" ");
+  result = result.forEach((el) => {
     debugger;
 if (el != "") {
       el = Number(el);
