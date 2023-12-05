@@ -1,6 +1,6 @@
 function objectFactory(library, orders) {
   let result = [];
-  for (const el of orders) {
+  for (let el of orders) {
     let currentObj = Object.assign({}, el.template);
     for (let func of el.parts) {
       currentObj[func] = library[func];
