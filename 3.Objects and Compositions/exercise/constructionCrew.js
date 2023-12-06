@@ -1,12 +1,11 @@
 function constructionCrew(obj) {
   let result = Object.assign({}, obj);
-  
 
   if (result.dizziness) {
     result.levelOfHydrated += 0.1 * result.weight * result.experience;
     result.dizziness = false;
   }
- return result
+  return result;
 }
 
 constructionCrew({
