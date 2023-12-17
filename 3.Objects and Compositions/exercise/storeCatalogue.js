@@ -4,12 +4,11 @@ function storeCatalogue(input) {
   for (let el of sortedArr) {
     let firstLetter = el.charAt(0);
 
-el=el.split(" :").join(":");
+    el = el.split(" :").join(":");
 
     if (!result.hasOwnProperty(firstLetter)) {
       result[firstLetter] = [el];
     } else {
-        
       result[firstLetter].push(el);
     }
   }
