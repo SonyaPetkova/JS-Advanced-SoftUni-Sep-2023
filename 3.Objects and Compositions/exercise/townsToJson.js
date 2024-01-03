@@ -4,15 +4,16 @@ function townsToJson(input) {
   for (const row of input) {
     let [town, latitude, longitude] = row.match(/[^|]+/gm);
 
-  latitude=Number(latitude).toFixed(2)
-  longitude=Number(longitude).toFixed(2)
- 
-   
-    result.push({"Town":town.trim(),"Latitude": Number(latitude),"Longitude" : Number(longitude)});
-    
+    latitude = Number(latitude).toFixed(2);
+    longitude = Number(longitude).toFixed(2);
+
+    result.push({
+      Town: town.trim(),
+      Latitude: Number(latitude),
+      Longitude: Number(longitude),
+    });
   }
   console.log(JSON.stringify(result));
-
 }
 townsToJson([
   "| Town | Latitude | Longitude |",
