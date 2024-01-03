@@ -1,18 +1,15 @@
 function rectangle(width, height, color) {
-function capitalizeFirstLetter(string) {
-    let firstLetter=string.charAt(0).toUpperCase();
-    return firstLetter+string.substring(1)
-   
-}
-   
+  function capitalizeFirstLetter(string) {
+    let firstLetter = string.charAt(0).toUpperCase();
+    return firstLetter + string.substring(1);
+  }
 
   return (result = {
     width,
     height,
-    color:capitalizeFirstLetter(color)
-    ,
+    color: capitalizeFirstLetter(color),
     calcArea: () => {
-        return width*height;
+      return width * height;
     },
   });
 }
