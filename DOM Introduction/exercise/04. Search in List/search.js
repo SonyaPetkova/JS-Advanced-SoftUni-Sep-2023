@@ -4,7 +4,7 @@ function search() {
 
   let searchText = document.getElementById("searchText").value;
 
-  let counter=0;
+  let counter = 0;
 
   for (const el of towns) {
     let town = el.textContent.toLowerCase();
@@ -12,13 +12,10 @@ function search() {
       el.style.fontWeight = "bold";
       el.style.textDecoration = "underline";
       counter++;
-    }else{
+    } else {
       el.style.fontWeight = "";
       el.style.textDecoration = "none";
     }
-   
-   
   }
-  document.getElementById("result").textContent=`${counter} matches found`
- 
+  document.getElementById("result").textContent = `${counter} matches found`;
 }
