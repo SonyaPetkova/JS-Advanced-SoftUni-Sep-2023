@@ -12,13 +12,12 @@ function solve() {
       for (let td of tableData) {
         if (td.textContent.includes(searchField.value)) {
           row.classList.add("select");
-         
+
           break;
         } else {
           row.classList.remove("select");
         }
       }
-  
     }
     searchField.value = "";
   }
