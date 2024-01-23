@@ -9,7 +9,6 @@ function deleteByEmail() {
       let row = email.parentNode;
       row.parentNode.removeChild(row);
       result.textContent = "Deleted.";
-      console.log("deleted");
       return
     }
    document.getElementById("result").textContent="Not found."
