@@ -16,14 +16,11 @@ function addItem() {
   listItem.appendChild(removeLink);
 
   document.getElementById("items").appendChild(listItem);
-  
 
-  removeLink.addEventListener("click",handler)
+  removeLink.addEventListener("click", handler);
 
   function handler(e) {
-   const toDelete=e.currentTarget.parentNode;
-   toDelete.parentNode.removeChild(toDelete)
-
-
+    const toDelete = e.currentTarget.parentNode;
+    toDelete.parentNode.removeChild(toDelete);
   }
 }
