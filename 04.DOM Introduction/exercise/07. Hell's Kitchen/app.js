@@ -31,19 +31,19 @@ function solve() {
 
     let currentAverage = 0;
     let bestRestaurant = "";
-    let lastOneAdded = "";
+    let firstOneAdded = "";
     for (const key in result) {
       result[key]["Average Salary"] =
         result[key]["Average Salary"] / Number(result[key].workersData.length);
       if (result[key]["Average Salary"] === currentAverage) {
-        bestRestaurant = lastOneAdded;
+        bestRestaurant = firstOneAdded;
       }
       if (result[key]["Average Salary"] > currentAverage) {
         currentAverage = result[key]["Average Salary"];
 
         bestRestaurant = key;
       }
-      lastOneAdded = key;
+      firstOneAdded = key;
     }
 
     let output1 = `Name: ${bestRestaurant} Average Salary: ${result[
