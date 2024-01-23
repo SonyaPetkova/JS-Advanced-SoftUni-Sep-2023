@@ -9,6 +9,7 @@ function attachGradientEvents() {
 
     resultValue.textContent = mousePositionPercents + "%";
   }
+  
   function blur(e) {
     console.log(e.target);
     resultValue.textContent=""
