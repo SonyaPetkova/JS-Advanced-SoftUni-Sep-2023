@@ -8,15 +8,10 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
 }
 
 function createFormatter(separator, symbol, symbolFirst, formatter) {
-    return (num)=> formatter(separator,symbol,symbolFirst,num)
-        
-    
-
-
+  return (num) => formatter(separator, symbol, symbolFirst, num);
 }
 
-
-let dollarFormatter = createFormatter(',', '$', true, currencyFormatter);
+let dollarFormatter = createFormatter(",", "$", true, currencyFormatter);
 
 console.log(dollarFormatter(5345)); // $ 5345,00
 
