@@ -16,7 +16,7 @@ function solve(area, vol, objArrJson) {
     };
     result.push(currentCalc);
   });
-  console.log(result[0]);
+ return result
 }
 
 solve(
