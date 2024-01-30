@@ -1,5 +1,5 @@
 function createCar(inputArr) {
-  let cars = [];
+  let cars = {};
 
   function create(...arg) {
     if (!arg.includes("inherit")) {
