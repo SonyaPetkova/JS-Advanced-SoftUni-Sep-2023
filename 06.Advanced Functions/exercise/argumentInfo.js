@@ -8,9 +8,9 @@ function solve(...params) {
     }
     result[type] = result[type] + 1;
   }
-let sortRes=Object.entries(result).sort((a,b)=>b[1]-a[1])
+  let sortRes = Object.entries(result).sort((a, b) => b[1] - a[1]);
 
-  for (const [key, value] of sortRes ) {
+  for (const [key, value] of sortRes) {
     console.log(`${key} = ${value}`);
   }
 }
