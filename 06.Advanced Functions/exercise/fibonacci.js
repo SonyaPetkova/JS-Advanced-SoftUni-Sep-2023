@@ -1,16 +1,14 @@
 function getFibonator() {
-    let firstNum=0
-    let secondNumber=1;
-  
-return function fib() {
-    let result=firstNum+secondNumber;
- firstNum=secondNumber;
- secondNumber=result
- 
-      return firstNum
-    }
-    
-    
+  let firstNum = 0;
+  let secondNumber = 1;
+
+  return function fib() {
+    let result = firstNum + secondNumber;
+    firstNum = secondNumber;
+    secondNumber = result;
+
+    return firstNum;
+  };
 }
 let fib = getFibonator();
 
