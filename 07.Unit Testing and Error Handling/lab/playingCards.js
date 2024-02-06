@@ -37,6 +37,14 @@ function playingCards(cardFace, cardSuit) {
   } else {
     throw new Error();
   }
+
+
+
+
+
+
+
+  
   return cardOBj
 }
 
