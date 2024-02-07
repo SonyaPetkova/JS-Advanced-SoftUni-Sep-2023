@@ -32,21 +32,15 @@ function deckOfCards(arr) {
     } else {
       [face, suit] = cardEl.split("");
     }
-    if (
-        validFaces.includes(face) &&
-        Object.keys(validSuits).includes(suit)
-      ){
-        createdCard(face, suit);
-      }else {
-        return console.log(`Invalid card: ${face}${suit}`);
-       }
-    
+    if (validFaces.includes(face) && Object.keys(validSuits).includes(suit)) {
+      createdCard(face, suit);
+    } else {
+      return console.log(`Invalid card: ${face}${suit}`);
+    }
   }
 
   function createdCard(cardFace, cardSuit) {
-     
-      cardOBj.set(cardFace, Object.values(validSuits[cardSuit]).toString());
-     
+    cardOBj.set(cardFace, Object.values(validSuits[cardSuit]).toString());
   }
   let output = "";
   for (const [face, suit] of cardOBj) {
@@ -57,4 +51,4 @@ function deckOfCards(arr) {
 }
 
 deckOfCards(["AS", "10D", "KH", "2C"]);
-deckOfCards(['5S', '3D', 'QD', '1C'])
+deckOfCards(["5S", "3D", "QD", "1C"]);

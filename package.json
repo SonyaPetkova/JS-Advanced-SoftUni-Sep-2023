@@ -1,6 +1,19 @@
 {
+
   "dependencies": {
     "chai": "^5.0.3",
     "mocha": "^10.2.0"
-  }
+  },
+  
+  "name": "js-advanced-softuni-sep-2023",
+  "version": "1.0.0",
+  "main": "numUtils.js",
+  "scripts": {
+    "test": "mocha"
+  },
+ "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
