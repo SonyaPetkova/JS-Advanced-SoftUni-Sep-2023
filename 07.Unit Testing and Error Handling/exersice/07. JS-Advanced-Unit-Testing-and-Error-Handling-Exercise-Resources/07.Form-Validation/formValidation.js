@@ -15,7 +15,7 @@ function validate() {
     checkbox.checked
       ? (companyInfoRef.style.display = "block")
       : (companyInfoRef.style.display = "none");
-      companyNumberRef.style.border = "none";
+    companyNumberRef.style.border = "none";
   }
 
   submitBtn.addEventListener("click", submitHandler);
@@ -40,13 +40,11 @@ function validate() {
         isValid.push(false);
       }
     }
-    if (isValid.every((el)=>el===true)) {
-        document.getElementById("valid").style.display="block"
-        console.log("true");
-    }else{
-        document.getElementById("valid").style.display="none"
+    if (isValid.every((el) => el === true)) {
+      document.getElementById("valid").style.display = "block";
+    } else {
+      document.getElementById("valid").style.display = "none";
     }
-    console.log(isValid);
   }
   function passwordValidator(password, confirmPass) {
     // check if the password consist only from letters,numbers and "_"
@@ -59,14 +57,14 @@ function validate() {
       passwordRef.style.borderColor = "red";
       confirmPassRef.style.borderColor = "red";
       return false;
-    } 
+    }
     //if yes check also  if the both password and confirm password match
     if (password !== confirmPass) {
       confirmPassRef.style.borderColor = "red";
       passwordRef.style.borderColor = "red";
       return false;
     } else {
-        passwordRef.style.border = "none";
+      passwordRef.style.border = "none";
       confirmPassRef.style.border = "none";
       return true;
     }
@@ -75,7 +73,7 @@ function validate() {
     let validationEMail = email;
     //first checking if email includes @
     if (!email.includes("@")) {
-        emailRef.style.borderColor = "red";
+      emailRef.style.borderColor = "red";
       return false;
     } else {
       //if yes splitting from the index of "@" and checking if it includes "."
