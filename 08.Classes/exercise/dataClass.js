@@ -4,12 +4,16 @@ class Request {
       (this.uri = uri),
       (this.version = version),
       (this.message = message),
-      this.response = undefined;
+      (this.response = undefined);
     this.fulfilled = false;
   }
 }
-let myData = new Request('GET',
+let myData = new Request(
+  "GET",
 
-'http://google.com', 'HTTP/1.1', '')
+  "http://google.com",
+  "HTTP/1.1",
+  ""
+);
 
 console.log(myData);
