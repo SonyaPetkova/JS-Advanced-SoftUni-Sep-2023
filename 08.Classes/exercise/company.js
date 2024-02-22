@@ -4,7 +4,7 @@ class Company {
   }
 
   addEmployee(name, salary, position, department) {
-    if (!name || !salary ||salary===""< 0 || !position || !department) {
+    if (!name||salary==="" || salary < 0 || !position || !department) {
       throw new Error("Invalid input!");
     }
 
@@ -58,10 +58,10 @@ class Company {
 
     return output;
   }}
-
+  
 let c = new Company();
 
-c.addEmployee("Stanimir", "", "engineer", "Construction");
+c.addEmployee("Stanimir", 2000, "engineer", "Construction");
 c.addEmployee("Pesho", 1500, "electrical engineer", "Construction");
 c.addEmployee("Slavi", 500, "dyer", "Construction");
 c.addEmployee("Stan", 2000, "architect", "Construction");
