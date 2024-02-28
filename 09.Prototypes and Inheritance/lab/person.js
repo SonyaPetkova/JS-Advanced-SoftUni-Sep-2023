@@ -1,26 +1,20 @@
-function createPerson(firstName,lastName){
-const result={firstName,
-lastName
-};
-Object.defineProperty(result,"fullName",{
-    get (){
-        return `${this.firstName} ${this.lastName}`
+function createPerson(firstName, lastName) {
+  const result = { firstName, lastName };
+  Object.defineProperty(result, "fullName", {
+    get() {
+      return `${this.firstName} ${this.lastName}`;
     },
-    set (fullName){
-        
- [firstName,lastName]=fullName.split(" ")
- this.firstName=firstName,
- this.lastName=lastName
-  
+    set(fullName) {
+      [firstName, lastName] = fullName.split(" ");
+      (this.firstName = firstName), (this.lastName = lastName);
     },
-   
-})
-return result
-
+  });
+  return result;
 }
 
-let person = createPerson("Peter", "Ivanov");
 
+
+let person = createPerson("Peter", "Ivanov");
 
 console.log(person.fullName); //Peter Ivanov
 
