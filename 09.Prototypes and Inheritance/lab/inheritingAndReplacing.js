@@ -22,7 +22,7 @@ function toStringExtension() {
       this.course = course;
     }
     toString() {
-      return `${super.toString().replace(")", "")}, course:${this.course})`;
+      return `${super.toString().replace(")", "")}, course: ${this.course})`;
     }
   }
 
