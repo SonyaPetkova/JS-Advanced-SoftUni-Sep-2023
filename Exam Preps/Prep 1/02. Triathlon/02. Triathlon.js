@@ -30,6 +30,8 @@ class Triathlon {
     delete this.participants[name];
     return `Congratulations, ${name} finished the whole competition`;
   }
+
+
   rewarding(name) {
     let output = this.listOfFinalists.filter((finalist) =>
       finalist.hasOwnProperty(name)
@@ -40,6 +42,8 @@ class Triathlon {
     }
     return `${name} is not in the current finalists list`;
   }
+
+  
   showRecord(criteria) {
     let output = `List of all ${this.competitionName} finalists:`;
     if (this.listOfFinalists.length === 0) {
@@ -54,14 +58,18 @@ class Triathlon {
       );
       return output;
     }
-let criteriaMatch=this.listOfFinalists.filter((finalist) =>Object.entries(finalist)[0][1]===criteria)
-    if (criteriaMatch.length === 0)  {
-        return`There are no ${criteria}'s that finished the competition`
+    let criteriaMatch = this.listOfFinalists.filter(
+      (finalist) => Object.entries(finalist)[0][1] === criteria
+    );
+    if (criteriaMatch.length === 0) {
+      return `There are no ${criteria}'s that finished the competition`;
     }
-     
-    return`${Object.keys(criteriaMatch[0])} is the first ${criteria} that finished the ${this.competitionName} triathlon`
 
-  
+    return `${Object.keys(
+      criteriaMatch[0]
+    )} is the first ${criteria} that finished the ${
+      this.competitionName
+    } triathlon`;
   }
 }
 // const contest = new Triathlon("Dynamos");
