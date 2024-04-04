@@ -2,9 +2,7 @@
 
   "dependencies": {
 
-    "chai": "^5.1.0",
-
-    "mocha": "^10.3.0"
+    "chai": "^5.1.0"
 
   },
 
@@ -28,7 +26,13 @@
 
   "license": "ISC",
 
-  "description": ""
+  "description": "",
+
+  "devDependencies": {
+
+    "mocha": "^10.4.0"
+
+  }
 
 }
 
