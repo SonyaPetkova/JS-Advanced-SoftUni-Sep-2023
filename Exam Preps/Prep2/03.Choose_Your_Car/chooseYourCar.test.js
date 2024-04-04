@@ -103,67 +103,45 @@ describe("Choose Your Car", function () {
       );
     });
 
-
     it("should throw an error if the value of the brandIndex Parameter is less than 0 or greater than the length", function () {
-        expect(() => chooseYourCar.brandName(["a"], -5)).to.throw(
-          `Invalid Information!`
-        );
-        expect(() => chooseYourCar.brandName(["a"], 1)).to.throw(
-            `Invalid Information!`
-          );
-      });
-
+      expect(() => chooseYourCar.brandName(["a"], -5)).to.throw(
+        `Invalid Information!`
+      );
+      expect(() => chooseYourCar.brandName(["a"], 1)).to.throw(
+        `Invalid Information!`
+      );
+    });
   });
-
-//   let litersPerHundredKm = (
-//     (consumptedFuelInLiters / distanceInKilometers) *
-//     100
-//   ).toFixed(2);
-
-//   if (
-//     typeof distanceInKilometers !== "number" ||
-//     distanceInKilometers <= 0 ||
-//     typeof consumptedFuelInLiters !== "number" ||
-//     consumptedFuelInLiters <= 0
-//   ) {
-//     throw new Error("Invalid Information!");
-//   } else if (litersPerHundredKm <= 7) {
-//     return `The car is efficient enough, it burns ${litersPerHundredKm} liters/100 km.`;
-//   } else {
-//     return `The car burns too much fuel - ${litersPerHundredKm} liters!`;
-//   }
-// },
 
   describe("carFuelConsumption", function () {
     it("should  return the appropriate message for consumption of fuel that is less than or equal 7,as we have two parameters distanceinKm and computedFuel in L", function () {
-        expect(chooseYourCar.carFuelConsumption(100,6)).equal(
-          `The car is efficient enough, it burns 6.00 liters/100 km.`
-        );
-        expect(chooseYourCar.carFuelConsumption(100,7)).equal(
-            `The car is efficient enough, it burns 7.00 liters/100 km.`
-          );
-      });
-      it("should  return the appropriate message for consumption of fuel that is greater than 7,as we have two parameters distanceinKm and computedFuel in L", function () {
-        expect(chooseYourCar.carFuelConsumption(100,10)).equal(
-          `The car burns too much fuel - 10.00 liters!`
-        );
-      });
-      it("should throw an error if the value of the both Parameters is not a number", function () {
-        expect(() => chooseYourCar.carFuelConsumption(["a"],1)).to.throw(
-          `Invalid Information!`
-        );
-        expect(() => chooseYourCar.carFuelConsumption(1, 0)).to.throw(
-            `Invalid Information!`
-          );
-      });
-      it("should throw an error if the value of the both Parameters is a negative number", function () {
-        expect(() => chooseYourCar.carFuelConsumption(-5,1)).to.throw(
-          `Invalid Information!`
-        );
-        expect(() => chooseYourCar.carFuelConsumption(1, -10)).to.throw(
-            `Invalid Information!`
-          );
-      });
-
-  })
+      expect(chooseYourCar.carFuelConsumption(100, 6)).equal(
+        `The car is efficient enough, it burns 6.00 liters/100 km.`
+      );
+      expect(chooseYourCar.carFuelConsumption(100, 7)).equal(
+        `The car is efficient enough, it burns 7.00 liters/100 km.`
+      );
+    });
+    it("should  return the appropriate message for consumption of fuel that is greater than 7,as we have two parameters distanceinKm and computedFuel in L", function () {
+      expect(chooseYourCar.carFuelConsumption(100, 10)).equal(
+        `The car burns too much fuel - 10.00 liters!`
+      );
+    });
+    it("should throw an error if the value of the both Parameters is not a number", function () {
+      expect(() => chooseYourCar.carFuelConsumption(["a"], 1)).to.throw(
+        `Invalid Information!`
+      );
+      expect(() => chooseYourCar.carFuelConsumption(1, 0)).to.throw(
+        `Invalid Information!`
+      );
+    });
+    it("should throw an error if the value of the both Parameters is a negative number", function () {
+      expect(() => chooseYourCar.carFuelConsumption(-5, 1)).to.throw(
+        `Invalid Information!`
+      );
+      expect(() => chooseYourCar.carFuelConsumption(1, -10)).to.throw(
+        `Invalid Information!`
+      );
+    });
+  });
 });
